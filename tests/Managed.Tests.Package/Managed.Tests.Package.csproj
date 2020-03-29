@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>$(StandardTestTfms)</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\Managed.Tests\*Tests\*.cs" Link="%(RecursiveDir)\%(Filename).cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Managed" Version="$(VersionPrefix)" />
+    </ItemGroup>
+
+</Project>
