@@ -221,3 +221,4 @@ _Pvt_Extensions
 /source/packages
 /NuGet-Packed
 /fuzz/instrumented
+/native-out

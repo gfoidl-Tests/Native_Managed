@@ -1,7 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>$(StandardTfms)</TargetFrameworks>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="..\..\native-out\Native.dll" PackagePath="runtimes/win-x64/native" />
+        <Content Include="..\..\native-out\libNative.so" PackagePath="runtimes/linux-x64/native" />
+        <Content Include="..\..\native-out\libNative.dylib" PackagePath="runtimes/mac-x64/native" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="..\..\native-out\*" Visible="false" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
 
 </Project>

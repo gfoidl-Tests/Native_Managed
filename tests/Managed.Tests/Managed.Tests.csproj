@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>$(StandardTestTfms)</TargetFrameworks>
@@ -6,6 +6,12 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\source\Managed\Managed.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Configuration)' == 'Release'">
+        <Compile Remove="MathTests\MetaInfos.cs" />
+
+        <None Include="MathTests\MetaInfos.cs" />
     </ItemGroup>
 
 </Project>
