@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19B8F518-4928-466B-8478-7E90FD718F24}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{563351B8-45BF-4E96-93D5-A574A13DADD5}"
+	ProjectSection(SolutionItems) = preProject
+		build.sh = build.sh
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".azure", ".azure", "{47943FF6-45E6-4A88-A878-1C5F33C0BF0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{1978AA6A-00B3-48E8-8534-20F465ED43DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F2EFA02F-3DD2-40B7-BECD-8F8C5906EEB1}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\automerge.yml = .github\workflows\automerge.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{21B62DB8-095C-48E2-B8A1-BB0C3EAFE7DF}"
+	ProjectSection(SolutionItems) = preProject
+		.azure\pipelines\ci.yml = .azure\pipelines\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jobs", "jobs", "{BEA323AA-491E-4AF7-9968-B29F70D5395E}"
+	ProjectSection(SolutionItems) = preProject
+		.azure\pipelines\jobs\build_and_test.yml = .azure\pipelines\jobs\build_and_test.yml
+		.azure\pipelines\jobs\deploy_nuget.yml = .azure\pipelines\jobs\deploy_nuget.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{D740A5CB-B58D-42F5-BBCB-8F1027C5D405}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{695429F4-0F99-4B83-B0F4-A3BCE78F7442}"
+	ProjectSection(SolutionItems) = preProject
+		tests\Directory.Build.props = tests\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Managed", "source\Managed\Managed.csproj", "{3E408EFE-CC6F-446C-8C9E-DE4B83A98970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Managed.Tests", "tests\Managed.Tests\Managed.Tests.csproj", "{77FF9B78-90BA-41F0-A00C-B65030B24DCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E408EFE-CC6F-446C-8C9E-DE4B83A98970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E408EFE-CC6F-446C-8C9E-DE4B83A98970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E408EFE-CC6F-446C-8C9E-DE4B83A98970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E408EFE-CC6F-446C-8C9E-DE4B83A98970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FF9B78-90BA-41F0-A00C-B65030B24DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FF9B78-90BA-41F0-A00C-B65030B24DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FF9B78-90BA-41F0-A00C-B65030B24DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FF9B78-90BA-41F0-A00C-B65030B24DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47943FF6-45E6-4A88-A878-1C5F33C0BF0B} = {563351B8-45BF-4E96-93D5-A574A13DADD5}
+		{1978AA6A-00B3-48E8-8534-20F465ED43DE} = {563351B8-45BF-4E96-93D5-A574A13DADD5}
+		{F2EFA02F-3DD2-40B7-BECD-8F8C5906EEB1} = {1978AA6A-00B3-48E8-8534-20F465ED43DE}
+		{21B62DB8-095C-48E2-B8A1-BB0C3EAFE7DF} = {47943FF6-45E6-4A88-A878-1C5F33C0BF0B}
+		{BEA323AA-491E-4AF7-9968-B29F70D5395E} = {21B62DB8-095C-48E2-B8A1-BB0C3EAFE7DF}
+		{3E408EFE-CC6F-446C-8C9E-DE4B83A98970} = {D740A5CB-B58D-42F5-BBCB-8F1027C5D405}
+		{77FF9B78-90BA-41F0-A00C-B65030B24DCE} = {695429F4-0F99-4B83-B0F4-A3BCE78F7442}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34DEB724-92A6-448B-9355-5CA5F3F462B2}
+	EndGlobalSection
+EndGlobal
