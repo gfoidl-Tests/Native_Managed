@@ -13,7 +13,9 @@ if (NOT "$ENV{BUILD_CONFIG}" STREQUAL "")
 else()
     set(BUILD_CONFIG "Debug" CACHE INTERNAL "set default")
 endif()
+
 message("CMAKE: Building with config ${BUILD_CONFIG}")
+message("Generated with config types: ${CMAKE_CONFIGURATION_TYPES}")
 
 project(NativeLib VERSION ${PROJECT_VERSION})
 add_subdirectory(source/Native)

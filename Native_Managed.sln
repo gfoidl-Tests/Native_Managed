@@ -35,6 +35,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jobs", "jobs", "{BEA323AA-491E-4AF7-9968-B29F70D5395E}"
 	ProjectSection(SolutionItems) = preProject
 		.azure\pipelines\jobs\build_and_test.yml = .azure\pipelines\jobs\build_and_test.yml
+		.azure\pipelines\jobs\build_native.yml = .azure\pipelines\jobs\build_native.yml
 		.azure\pipelines\jobs\deploy_nuget.yml = .azure\pipelines\jobs\deploy_nuget.yml
 	EndProjectSection
 EndProject

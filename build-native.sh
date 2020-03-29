@@ -10,7 +10,7 @@ mkdir -p $binPath
 cd $_
 
 cmake -DCMAKE_BUILD_TYPE=$config ../..
-cmake --build .
+cmake --build . --config $config
 
 echo ""
 echo "output written to $binPath"
