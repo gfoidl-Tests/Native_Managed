@@ -1,0 +1,11 @@
+#include "version.h"
+//-----------------------------------------------------------------------------
+const char* getVersion()
+{
+    return "${NativeLib_VERSION}";
+}
+//-----------------------------------------------------------------------------
+const char* buildConfig()
+{
+    return "${BUILD_CONFIG}";
+}
