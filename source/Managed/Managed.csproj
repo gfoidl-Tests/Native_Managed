@@ -8,7 +8,7 @@
     <ItemGroup>
         <Content Include="..\..\native-out\Native.dll" PackagePath="runtimes/win-x64/native" />
         <Content Include="..\..\native-out\libNative.so" PackagePath="runtimes/linux-x64/native" />
-        <Content Include="..\..\native-out\libNative.dylib" PackagePath="runtimes/mac-x64/native" />
+        <Content Include="..\..\native-out\libNative.dylib" PackagePath="runtimes/osx-x64/native" />
     </ItemGroup>
 
     <ItemGroup>
