@@ -9,7 +9,16 @@ binPath="bin/$config"
 mkdir -p $binPath
 cd $_
 
-cmake -DCMAKE_BUILD_TYPE=$config ../..
+configFlags="-DCMAKE_BUILD_TYPE=$config"
+
+# alternatively
+#$ export CC=clang
+#$ export CXX=clang++
+if [[ "$2" == "clang" ]]; then
+	configFlags="$configFlags -DCMAKE_C_COMPILER=clang-3.8 -DCMAKE_CXX_COMPILER=clang++-3.8"
+fi
+
+cmake $configFlags ../..
 cmake --build . --config $config
 
 echo ""
