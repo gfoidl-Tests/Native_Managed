@@ -15,4 +15,17 @@
         <Content Update="..\..\native-out\*" Visible="false" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Remove="Native\*.cs" />
+        <None Include="Native\*.cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+        <Compile Include="Native\Native.net50.cs" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+        <Compile Include="Native\Native.netstandard21.cs" />
+    </ItemGroup>
+
 </Project>

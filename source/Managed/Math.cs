@@ -5,7 +5,7 @@ namespace Managed
 {
     public static class Math
     {
-        public static int Add(int a, int b) => Native.add(a, b);
+        public static int Add(int a, int b) => Native.Add(a, b);
         //---------------------------------------------------------------------
         public static unsafe int Sum(ReadOnlySpan<int> data)
         {
@@ -13,12 +13,11 @@ namespace Managed
 
             fixed (int* ptr = &MemoryMarshal.GetReference(data))
             {
-                return Native.sum(ptr, data.Length);
+                return Native.Sum(ptr, data.Length);
             }
         }
         //---------------------------------------------------------------------
-        public static string GetNativeVersion()     => GetString(Native.getVersion());
-        public static string GetNativeBuildConfig() => GetString(Native.buildConfig());
-        private static string GetString(IntPtr ptr) => Marshal.PtrToStringAnsi(ptr);
+        public static string GetNativeVersion()     => Native.GetVersion();
+        public static string GetNativeBuildConfig() => Native.BuildConfig();
     }
 }
