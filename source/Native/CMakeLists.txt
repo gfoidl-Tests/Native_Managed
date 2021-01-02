@@ -4,11 +4,11 @@
 # extern "C" still needs to be defined (same on non-windows too)
 #set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
-configure_file(version.cpp.in version.cpp)
+configure_file(version.c.in version.c)
 
 add_library(Native SHARED
-    "math.cpp"
-    "${CMAKE_CURRENT_BINARY_DIR}/version.cpp"
+    "math.c"
+    "${CMAKE_CURRENT_BINARY_DIR}/version.c"
 )
 
 target_include_directories(Native PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
