@@ -1,19 +1,20 @@
-﻿using NUnit.Framework;
+// (c) gfoidl, all rights reserved
 
-namespace Managed.Tests.MathTests
+using NUnit.Framework;
+
+namespace Managed.Tests.MathTests;
+
+[TestFixture]
+public class Add
 {
-    [TestFixture]
-    public class Add
+    [Test]
+    public void Two_summands_given___correct_sum()
     {
-        [Test]
-        public void Two_summands_given___correct_sum()
-        {
-            const int a = 3;
-            const int b = 4;
+        int a = 3;
+        int b = 4;
 
-            int actual = Math.Add(a, b);
+        int actual = Math.Add(a, b);
 
-            Assert.AreEqual(a + b, actual);
-        }
+        Assert.That(actual, Is.EqualTo(a + b));
     }
 }

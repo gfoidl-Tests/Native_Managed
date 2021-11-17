@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+// (c) gfoidl, all rights reserved
+
+using NUnit.Framework;
 
 namespace Managed.Tests.MathTests
 {
@@ -10,7 +12,7 @@ namespace Managed.Tests.MathTests
         {
             string actual = Math.GetNativeVersion();
 
-            Assert.AreEqual("0.1.0", actual);
+            Assert.That(actual, Is.EqualTo("0.1.0"));
         }
         //---------------------------------------------------------------------
         [Test]
@@ -18,7 +20,7 @@ namespace Managed.Tests.MathTests
         {
             string actual = Math.GetNativeBuildConfig();
 
-            Assert.AreEqual("Release", actual);
+            Assert.That(actual, Is.EqualTo("Release"));
         }
     }
 }

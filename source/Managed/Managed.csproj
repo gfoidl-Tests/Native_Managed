@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>$(StandardTfms)</TargetFrameworks>
@@ -20,8 +20,8 @@
         <None Include="Native\*.cs" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-        <Compile Include="Native\Native.net50.cs" />
+    <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+        <Compile Include="Native\Native.net60.cs" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
