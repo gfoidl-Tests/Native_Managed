@@ -9,14 +9,14 @@
         <Authors>gfoidl</Authors>
         <Company>Foidl Günther</Company>
         <Product>Native_Managed</Product>
-        <Copyright>Copyright © Foidl Günther 2020-2021</Copyright>
+        <Copyright>Copyright © Foidl Günther 2020-2022</Copyright>
         <VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
         <AssemblyVersion>$(VersionMajor).$(VersionMinor).$(BuildNumber).$(VersionPatch)</AssemblyVersion>
     </PropertyGroup>
 
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
-        <StandardTfms>net6.0;netstandard2.1</StandardTfms>
+        <StandardTfms>net7.0;net6.0;netstandard2.1</StandardTfms>
     </PropertyGroup>
 
     <PropertyGroup>
