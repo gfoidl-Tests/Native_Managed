@@ -20,6 +20,10 @@
         <None Include="Native\*.cs" />
     </ItemGroup>
 
+    <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+        <Compile Include="Native\Native.net70.cs" />
+    </ItemGroup>
+
     <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
         <Compile Include="Native\Native.net60.cs" />
     </ItemGroup>
